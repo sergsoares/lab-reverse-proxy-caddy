@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", ping)
-	http.ListenAndServe(":3000", nil)
+	http.HandleFunc("/", ok)
+	http.ListenAndServe(":9000", nil)
 }
 
-func ping(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "pong")
+func ok(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "ok")
 }
